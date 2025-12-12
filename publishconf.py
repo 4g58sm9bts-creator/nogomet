@@ -1,0 +1,8 @@
+SITEURL = 'https://TVOJE_IME.github.io/nogomet-iznutra'
+RELATIVE_URLS = False
+
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
