@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Nogomet iznutra – edukativna stranica o nogometnoj taktici i razumijevanju igre.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/static/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">Nogomet<span>iznutra</span></div>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="nav">
+      {% for title, link in MENUITEMS %}
+        <a href="{{ SITEURL }}{{ link }}">{{ title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<footer>
+  © {{ SITENAME }} · Autor: {{ AUTHOR }}
+</footer>
+
+<script src="{{ SITEURL }}/theme/static/js/main.js"></script>
+</body>
+</html>
