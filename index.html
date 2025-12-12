@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <h1>Razumij igru.<br>Ne samo rezultat.</h1>
+  <p>
+    Nogomet iznutra je edukativni projekt čiji je cilj
+    objasniti nogometnu taktiku jednostavno, jasno i bez
+    nepotrebnog kompliciranja.
+  </p>
+
+  <p>
+    Ovdje nećeš naći rezultate, transfere ni senzacije.
+    Fokus je na razumijevanju prostora, uloga igrača i
+    razloga zašto treneri traže određene stvari.
+  </p>
+</section>
+
+<section class="grid">
+  {% for article in articles %}
+  <div class="card">
+    <h3>
+      <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+    </h3>
+    <p>{{ article.summary }}</p>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}
